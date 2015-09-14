@@ -1,18 +1,36 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" />
 		<meta charset="UTF-8" />
+		<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" />		
+		<style type="text/css">
+
+		</style>
 	</head>
     <body>
 
 		<div class="container-fluid">
 
-	        <h1>Olá mundo!</h1>
-			<p>Teste, 1, 2, 3, blá blá blá</p>
+	        <h1>Teste</h1>
+			<p>Entre com um valor:</p>
+
+			<input id="inputNumero" type="number" />
+			<button id="btOk" >Ok</button>
+
+			<h2>Resultado</h2>
+			<p id="resultado"></p>
 
         </div>
 
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-alpha1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>        
+        <script>
+        	$(function(){
+        		$("#btOk").click(function (){
+        			var valor = $("#inputNumero").val();
+        			$("#resultado").html("O dobro do valor digitado é "+(valor * 2)+".");        			
+        		});
+        	});
+        </script>
     </body>
 </html>
